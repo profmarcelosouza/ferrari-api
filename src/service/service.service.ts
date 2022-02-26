@@ -22,7 +22,7 @@ export class ServiceService {
     }
 
 
-    return this.prismaService.sevice.create({
+    return this.prismaService.sevices.create({
       data:{
         name: data.name,
         description: data.desciption,
@@ -32,7 +32,7 @@ export class ServiceService {
   }
 
   async findAll() {
-    return this.prismaService.sevice.findMany();
+    return this.prismaService.sevices.findMany();
   }
 
   async findOne(id: number) {
@@ -41,7 +41,7 @@ export class ServiceService {
     if(isNaN(id)){
       throw new BadRequestException('ID is invalid');
     }
-    return this.prismaService.sevice.findUnique({
+    return this.prismaService.sevices.findUnique({
       where:{
         id,
       }
@@ -62,7 +62,7 @@ export class ServiceService {
     if(!await this.findOne(id)){
       throw new NotFoundException('ID not found');
     }
-    return this.prismaService.sevice.delete({
+    return this.prismaService.sevices.delete({
       where:{
         id,
       }

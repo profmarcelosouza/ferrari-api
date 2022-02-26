@@ -9,8 +9,10 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { PrismaModule } from './prisma/prisma.module';
 import { ServiceModule } from './service/service.module';
-import { AdressModule } from './adress/adress.module';
 import { PaymentSituationsModule } from './payment-situations/payment-situations.module';
+import { AddressModule } from './address/address.module';
+import { TesteModule } from './teste/teste.module';
+import { TeteComprasModule } from './tete-compras/tete-compras.module';
 
 @Module({
   imports: [
@@ -21,8 +23,10 @@ import { PaymentSituationsModule } from './payment-situations/payment-situations
     UserModule,
     PrismaModule,
     ServiceModule,
-    AdressModule,
     PaymentSituationsModule,
+    AddressModule,
+    TesteModule,
+    TeteComprasModule,
   ],
   controllers: [
     TimeOptionController, AppController],
